@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e25ccca27d274b17ace2d5d3aa757149" Name="Diagram1">
+        <EntityTypeShape EntityType="VAR1Model.Firma" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VAR1Model.Pol" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VAR1Model.Polzovatel" Width="1.5" PointX="3" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VAR1Model.Rol" Width="1.5" PointX="3" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VAR1Model.Rol_Polz" Width="1.5" PointX="5.25" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VAR1Model.sysdiagram" Width="1.5" PointX="7.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VAR1Model.Zakaz" Width="1.5" PointX="5.25" PointY="6" IsExpanded="true" />
+        <AssociationConnector Association="VAR1Model.FK_Rol_Polz_Polzovatel" ManuallyRouted="false" />
+        <AssociationConnector Association="VAR1Model.FK_Rol_Polz_Rol" ManuallyRouted="false" />
+        <AssociationConnector Association="VAR1Model.Firma_Polz" ManuallyRouted="false" />
+        <AssociationConnector Association="VAR1Model.Pol_Polz" ManuallyRouted="false" />
+        <AssociationConnector Association="VAR1Model.Zakaz_Potreb" ManuallyRouted="false" />
+        <AssociationConnector Association="VAR1Model.Zakaz_Proizvoditel" ManuallyRouted="false" />
+        <AssociationConnector Association="VAR1Model.Zakaz_Voditel" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,297 @@
+{
+  "version": 3,
+  "targets": {
+    "net8.0-windows7.0": {
+      "Application.Extensions.SharedResources/10.0.0": {
+        "type": "package",
+        "contentFiles": {
+          "contentFiles/any/any/Text/Info.txt": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": true,
+            "outputPath": "Text/Info.txt"
+          },
+          "contentFiles/any/any/Text/InfoDb.txt": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": true,
+            "outputPath": "Text/InfoDb.txt"
+          },
+          "contentFiles/any/any/Text/InfoDbCreate.txt": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": true,
+            "outputPath": "Text/InfoDbCreate.txt"
+          },
+          "contentFiles/any/any/Text/README.md": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": true,
+            "outputPath": "Text/README.md"
+          },
+          "contentFiles/any/any/Text/Services/AUTH.txt": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": true,
+            "outputPath": "Text/Services/AUTH.txt"
+          },
+          "contentFiles/any/any/Text/Services/AuthService.cs": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": true,
+            "outputPath": "Text/Services/AuthService.cs"
+          },
+          "contentFiles/any/any/Text/Services/DataService.cs": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": true,
+            "outputPath": "Text/Services/DataService.cs"
+          },
+          "contentFiles/any/any/Text/Services/DataServiceAdo.cs": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": true,
+            "outputPath": "Text/Services/DataServiceAdo.cs"
+          },
+          "contentFiles/any/any/Text/VM FUNCS/ComboBoxChangeUserGender.txt": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": true,
+            "outputPath": "Text/VM FUNCS/ComboBoxChangeUserGender.txt"
+          },
+          "contentFiles/any/any/Text/VM FUNCS/ComboBoxDynamicJunctionTable.txt": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": true,
+            "outputPath": "Text/VM FUNCS/ComboBoxDynamicJunctionTable.txt"
+          },
+          "contentFiles/any/any/Text/VM FUNCS/ComboBoxLoadData.txt": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": true,
+            "outputPath": "Text/VM FUNCS/ComboBoxLoadData.txt"
+          },
+          "contentFiles/any/any/Text/VM FUNCS/ComboBoxSaveToJunctionTable.txt": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": true,
+            "outputPath": "Text/VM FUNCS/ComboBoxSaveToJunctionTable.txt"
+          },
+          "contentFiles/any/any/Text/ViewModels/00_Beg.txt": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": true,
+            "outputPath": "Text/ViewModels/00_Beg.txt"
+          },
+          "contentFiles/any/any/Text/ViewModels/01_CharactersViewModelConstructor.txt": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": true,
+            "outputPath": "Text/ViewModels/01_CharactersViewModelConstructor.txt"
+          },
+          "contentFiles/any/any/Text/ViewModels/02_LoadCharacters.txt": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": true,
+            "outputPath": "Text/ViewModels/02_LoadCharacters.txt"
+          },
+          "contentFiles/any/any/Text/ViewModels/03_AddCharacters.txt": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": true,
+            "outputPath": "Text/ViewModels/03_AddCharacters.txt"
+          },
+          "contentFiles/any/any/Text/ViewModels/04_UpdateCharacters.txt": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": true,
+            "outputPath": "Text/ViewModels/04_UpdateCharacters.txt"
+          },
+          "contentFiles/any/any/Text/ViewModels/05_DeleteCharacters.txt": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": true,
+            "outputPath": "Text/ViewModels/05_DeleteCharacters.txt"
+          },
+          "contentFiles/any/any/Text/ViewModels/BaseViewModel.cs": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": true,
+            "outputPath": "Text/ViewModels/BaseViewModel.cs"
+          },
+          "contentFiles/any/any/Text/Views/CharactersDataGridView.txt": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": true,
+            "outputPath": "Text/Views/CharactersDataGridView.txt"
+          },
+          "contentFiles/any/any/Text/Views/ComboBoxChangeUserGender.txt": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": true,
+            "outputPath": "Text/Views/ComboBoxChangeUserGender.txt"
+          },
+          "contentFiles/any/any/Text/Views/ComboBoxDynamicJunctionTable.txt": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": true,
+            "outputPath": "Text/Views/ComboBoxDynamicJunctionTable.txt"
+          },
+          "contentFiles/any/any/Text/Views/ComboBoxLoadData.txt": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": true,
+            "outputPath": "Text/Views/ComboBoxLoadData.txt"
+          },
+          "contentFiles/any/any/Text/Views/ComboBoxSaveToJunctionTable.txt": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": true,
+            "outputPath": "Text/Views/ComboBoxSaveToJunctionTable.txt"
+          },
+          "contentFiles/any/any/Text/Views/OG/AddCharacterView.txt": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": true,
+            "outputPath": "Text/Views/OG/AddCharacterView.txt"
+          },
+          "contentFiles/any/any/Text/Views/OG/CharactersDataGridView.txt": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": true,
+            "outputPath": "Text/Views/OG/CharactersDataGridView.txt"
+          },
+          "contentFiles/any/any/Text/Views/OG/UpdateCharacterWindow.txt": {
+            "buildAction": "Content",
+            "codeLanguage": "any",
+            "copyToOutput": true,
+            "outputPath": "Text/Views/OG/UpdateCharacterWindow.txt"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Application.Extensions.SharedResources/10.0.0": {
+      "sha512": "JtS5Udblr0+47xoymZh4ali+8ACmvC61q2Ip62xSt5KuPrACydGBPdRnHbqaqVFeolfGYZZBh9luhwQNUj0fIQ==",
+      "type": "package",
+      "path": "application.extensions.sharedresources/10.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "application.extensions.sharedresources.10.0.0.nupkg.sha512",
+        "application.extensions.sharedresources.nuspec",
+        "contentFiles/any/any/Text/Info.txt",
+        "contentFiles/any/any/Text/InfoDb.txt",
+        "contentFiles/any/any/Text/InfoDbCreate.txt",
+        "contentFiles/any/any/Text/README.md",
+        "contentFiles/any/any/Text/Services/AUTH.txt",
+        "contentFiles/any/any/Text/Services/AuthService.cs",
+        "contentFiles/any/any/Text/Services/DataService.cs",
+        "contentFiles/any/any/Text/Services/DataServiceAdo.cs",
+        "contentFiles/any/any/Text/VM FUNCS/ComboBoxChangeUserGender.txt",
+        "contentFiles/any/any/Text/VM FUNCS/ComboBoxDynamicJunctionTable.txt",
+        "contentFiles/any/any/Text/VM FUNCS/ComboBoxLoadData.txt",
+        "contentFiles/any/any/Text/VM FUNCS/ComboBoxSaveToJunctionTable.txt",
+        "contentFiles/any/any/Text/ViewModels/00_Beg.txt",
+        "contentFiles/any/any/Text/ViewModels/01_CharactersViewModelConstructor.txt",
+        "contentFiles/any/any/Text/ViewModels/02_LoadCharacters.txt",
+        "contentFiles/any/any/Text/ViewModels/03_AddCharacters.txt",
+        "contentFiles/any/any/Text/ViewModels/04_UpdateCharacters.txt",
+        "contentFiles/any/any/Text/ViewModels/05_DeleteCharacters.txt",
+        "contentFiles/any/any/Text/ViewModels/BaseViewModel.cs",
+        "contentFiles/any/any/Text/Views/CharactersDataGridView.txt",
+        "contentFiles/any/any/Text/Views/ComboBoxChangeUserGender.txt",
+        "contentFiles/any/any/Text/Views/ComboBoxDynamicJunctionTable.txt",
+        "contentFiles/any/any/Text/Views/ComboBoxLoadData.txt",
+        "contentFiles/any/any/Text/Views/ComboBoxSaveToJunctionTable.txt",
+        "contentFiles/any/any/Text/Views/OG/AddCharacterView.txt",
+        "contentFiles/any/any/Text/Views/OG/CharactersDataGridView.txt",
+        "contentFiles/any/any/Text/Views/OG/UpdateCharacterWindow.txt"
+      ]
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net8.0-windows7.0": [
+      "Application.Extensions.SharedResources >= 10.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\ASD\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "D:\\VSC\\DEMO-exam\\DEMO-1\\WPF\\WpfApp2\\WpfApp2\\WpfApp2.csproj",
+      "projectName": "WpfApp2",
+      "projectPath": "D:\\VSC\\DEMO-exam\\DEMO-1\\WPF\\WpfApp2\\WpfApp2\\WpfApp2.csproj",
+      "packagesPath": "C:\\Users\\ASD\\.nuget\\packages\\",
+      "outputPath": "D:\\VSC\\DEMO-exam\\DEMO-1\\WPF\\WpfApp2\\WpfApp2\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\ASD\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net8.0-windows"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net8.0-windows7.0": {
+          "targetAlias": "net8.0-windows",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
+    },
+    "frameworks": {
+      "net8.0-windows7.0": {
+        "targetAlias": "net8.0-windows",
+        "dependencies": {
+          "Application.Extensions.SharedResources": {
+            "target": "Package",
+            "version": "[10.0.0, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WPF": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.305/PortableRuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

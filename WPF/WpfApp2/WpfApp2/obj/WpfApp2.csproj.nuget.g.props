@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
+    <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
+    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
+    <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\ASD\.nuget\packages\;C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages</NuGetPackageFolders>
+    <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">6.14.1</NuGetToolVersion>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <SourceRoot Include="C:\Users\ASD\.nuget\packages\" />
+    <SourceRoot Include="C:\Program Files (x86)\Microsoft Visual Studio\Shared\NuGetPackages\" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Content Include="$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\Info.txt" Condition="Exists('$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\Info.txt')">
+      <NuGetPackageId>Application.Extensions.SharedResources</NuGetPackageId>
+      <NuGetPackageVersion>10.0.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Text\Info.txt</TargetPath>
+      <DestinationSubDirectory>Text\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>Text\Info.txt</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\InfoDb.txt" Condition="Exists('$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\InfoDb.txt')">
+      <NuGetPackageId>Application.Extensions.SharedResources</NuGetPackageId>
+      <NuGetPackageVersion>10.0.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Text\InfoDb.txt</TargetPath>
+      <DestinationSubDirectory>Text\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>Text\InfoDb.txt</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\InfoDbCreate.txt" Condition="Exists('$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\InfoDbCreate.txt')">
+      <NuGetPackageId>Application.Extensions.SharedResources</NuGetPackageId>
+      <NuGetPackageVersion>10.0.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Text\InfoDbCreate.txt</TargetPath>
+      <DestinationSubDirectory>Text\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>Text\InfoDbCreate.txt</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\README.md" Condition="Exists('$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\README.md')">
+      <NuGetPackageId>Application.Extensions.SharedResources</NuGetPackageId>
+      <NuGetPackageVersion>10.0.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Text\README.md</TargetPath>
+      <DestinationSubDirectory>Text\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>Text\README.md</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\Services\AUTH.txt" Condition="Exists('$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\Services\AUTH.txt')">
+      <NuGetPackageId>Application.Extensions.SharedResources</NuGetPackageId>
+      <NuGetPackageVersion>10.0.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Text\Services\AUTH.txt</TargetPath>
+      <DestinationSubDirectory>Text\Services\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>Text\Services\AUTH.txt</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\Services\AuthService.cs" Condition="Exists('$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\Services\AuthService.cs')">
+      <NuGetPackageId>Application.Extensions.SharedResources</NuGetPackageId>
+      <NuGetPackageVersion>10.0.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Text\Services\AuthService.cs</TargetPath>
+      <DestinationSubDirectory>Text\Services\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>Text\Services\AuthService.cs</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\Services\DataService.cs" Condition="Exists('$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\Services\DataService.cs')">
+      <NuGetPackageId>Application.Extensions.SharedResources</NuGetPackageId>
+      <NuGetPackageVersion>10.0.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Text\Services\DataService.cs</TargetPath>
+      <DestinationSubDirectory>Text\Services\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>Text\Services\DataService.cs</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\Services\DataServiceAdo.cs" Condition="Exists('$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\Services\DataServiceAdo.cs')">
+      <NuGetPackageId>Application.Extensions.SharedResources</NuGetPackageId>
+      <NuGetPackageVersion>10.0.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Text\Services\DataServiceAdo.cs</TargetPath>
+      <DestinationSubDirectory>Text\Services\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>Text\Services\DataServiceAdo.cs</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\VM FUNCS\ComboBoxChangeUserGender.txt" Condition="Exists('$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\VM FUNCS\ComboBoxChangeUserGender.txt')">
+      <NuGetPackageId>Application.Extensions.SharedResources</NuGetPackageId>
+      <NuGetPackageVersion>10.0.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Text\VM FUNCS\ComboBoxChangeUserGender.txt</TargetPath>
+      <DestinationSubDirectory>Text\VM FUNCS\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>Text\VM FUNCS\ComboBoxChangeUserGender.txt</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\VM FUNCS\ComboBoxDynamicJunctionTable.txt" Condition="Exists('$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\VM FUNCS\ComboBoxDynamicJunctionTable.txt')">
+      <NuGetPackageId>Application.Extensions.SharedResources</NuGetPackageId>
+      <NuGetPackageVersion>10.0.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Text\VM FUNCS\ComboBoxDynamicJunctionTable.txt</TargetPath>
+      <DestinationSubDirectory>Text\VM FUNCS\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>Text\VM FUNCS\ComboBoxDynamicJunctionTable.txt</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\VM FUNCS\ComboBoxLoadData.txt" Condition="Exists('$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\VM FUNCS\ComboBoxLoadData.txt')">
+      <NuGetPackageId>Application.Extensions.SharedResources</NuGetPackageId>
+      <NuGetPackageVersion>10.0.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Text\VM FUNCS\ComboBoxLoadData.txt</TargetPath>
+      <DestinationSubDirectory>Text\VM FUNCS\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>Text\VM FUNCS\ComboBoxLoadData.txt</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\VM FUNCS\ComboBoxSaveToJunctionTable.txt" Condition="Exists('$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\VM FUNCS\ComboBoxSaveToJunctionTable.txt')">
+      <NuGetPackageId>Application.Extensions.SharedResources</NuGetPackageId>
+      <NuGetPackageVersion>10.0.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Text\VM FUNCS\ComboBoxSaveToJunctionTable.txt</TargetPath>
+      <DestinationSubDirectory>Text\VM FUNCS\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>Text\VM FUNCS\ComboBoxSaveToJunctionTable.txt</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\ViewModels\00_Beg.txt" Condition="Exists('$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\ViewModels\00_Beg.txt')">
+      <NuGetPackageId>Application.Extensions.SharedResources</NuGetPackageId>
+      <NuGetPackageVersion>10.0.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Text\ViewModels\00_Beg.txt</TargetPath>
+      <DestinationSubDirectory>Text\ViewModels\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>Text\ViewModels\00_Beg.txt</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\ViewModels\01_CharactersViewModelConstructor.txt" Condition="Exists('$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\ViewModels\01_CharactersViewModelConstructor.txt')">
+      <NuGetPackageId>Application.Extensions.SharedResources</NuGetPackageId>
+      <NuGetPackageVersion>10.0.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Text\ViewModels\01_CharactersViewModelConstructor.txt</TargetPath>
+      <DestinationSubDirectory>Text\ViewModels\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>Text\ViewModels\01_CharactersViewModelConstructor.txt</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\ViewModels\02_LoadCharacters.txt" Condition="Exists('$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\ViewModels\02_LoadCharacters.txt')">
+      <NuGetPackageId>Application.Extensions.SharedResources</NuGetPackageId>
+      <NuGetPackageVersion>10.0.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Text\ViewModels\02_LoadCharacters.txt</TargetPath>
+      <DestinationSubDirectory>Text\ViewModels\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>Text\ViewModels\02_LoadCharacters.txt</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\ViewModels\03_AddCharacters.txt" Condition="Exists('$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\ViewModels\03_AddCharacters.txt')">
+      <NuGetPackageId>Application.Extensions.SharedResources</NuGetPackageId>
+      <NuGetPackageVersion>10.0.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Text\ViewModels\03_AddCharacters.txt</TargetPath>
+      <DestinationSubDirectory>Text\ViewModels\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>Text\ViewModels\03_AddCharacters.txt</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\ViewModels\04_UpdateCharacters.txt" Condition="Exists('$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\ViewModels\04_UpdateCharacters.txt')">
+      <NuGetPackageId>Application.Extensions.SharedResources</NuGetPackageId>
+      <NuGetPackageVersion>10.0.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Text\ViewModels\04_UpdateCharacters.txt</TargetPath>
+      <DestinationSubDirectory>Text\ViewModels\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>Text\ViewModels\04_UpdateCharacters.txt</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\ViewModels\05_DeleteCharacters.txt" Condition="Exists('$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\ViewModels\05_DeleteCharacters.txt')">
+      <NuGetPackageId>Application.Extensions.SharedResources</NuGetPackageId>
+      <NuGetPackageVersion>10.0.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Text\ViewModels\05_DeleteCharacters.txt</TargetPath>
+      <DestinationSubDirectory>Text\ViewModels\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>Text\ViewModels\05_DeleteCharacters.txt</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\ViewModels\BaseViewModel.cs" Condition="Exists('$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\ViewModels\BaseViewModel.cs')">
+      <NuGetPackageId>Application.Extensions.SharedResources</NuGetPackageId>
+      <NuGetPackageVersion>10.0.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Text\ViewModels\BaseViewModel.cs</TargetPath>
+      <DestinationSubDirectory>Text\ViewModels\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>Text\ViewModels\BaseViewModel.cs</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\Views\CharactersDataGridView.txt" Condition="Exists('$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\Views\CharactersDataGridView.txt')">
+      <NuGetPackageId>Application.Extensions.SharedResources</NuGetPackageId>
+      <NuGetPackageVersion>10.0.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Text\Views\CharactersDataGridView.txt</TargetPath>
+      <DestinationSubDirectory>Text\Views\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>Text\Views\CharactersDataGridView.txt</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\Views\ComboBoxChangeUserGender.txt" Condition="Exists('$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\Views\ComboBoxChangeUserGender.txt')">
+      <NuGetPackageId>Application.Extensions.SharedResources</NuGetPackageId>
+      <NuGetPackageVersion>10.0.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Text\Views\ComboBoxChangeUserGender.txt</TargetPath>
+      <DestinationSubDirectory>Text\Views\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>Text\Views\ComboBoxChangeUserGender.txt</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\Views\ComboBoxDynamicJunctionTable.txt" Condition="Exists('$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\Views\ComboBoxDynamicJunctionTable.txt')">
+      <NuGetPackageId>Application.Extensions.SharedResources</NuGetPackageId>
+      <NuGetPackageVersion>10.0.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Text\Views\ComboBoxDynamicJunctionTable.txt</TargetPath>
+      <DestinationSubDirectory>Text\Views\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>Text\Views\ComboBoxDynamicJunctionTable.txt</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\Views\ComboBoxLoadData.txt" Condition="Exists('$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\Views\ComboBoxLoadData.txt')">
+      <NuGetPackageId>Application.Extensions.SharedResources</NuGetPackageId>
+      <NuGetPackageVersion>10.0.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Text\Views\ComboBoxLoadData.txt</TargetPath>
+      <DestinationSubDirectory>Text\Views\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>Text\Views\ComboBoxLoadData.txt</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\Views\ComboBoxSaveToJunctionTable.txt" Condition="Exists('$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\Views\ComboBoxSaveToJunctionTable.txt')">
+      <NuGetPackageId>Application.Extensions.SharedResources</NuGetPackageId>
+      <NuGetPackageVersion>10.0.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Text\Views\ComboBoxSaveToJunctionTable.txt</TargetPath>
+      <DestinationSubDirectory>Text\Views\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>Text\Views\ComboBoxSaveToJunctionTable.txt</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\Views\OG\AddCharacterView.txt" Condition="Exists('$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\Views\OG\AddCharacterView.txt')">
+      <NuGetPackageId>Application.Extensions.SharedResources</NuGetPackageId>
+      <NuGetPackageVersion>10.0.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Text\Views\OG\AddCharacterView.txt</TargetPath>
+      <DestinationSubDirectory>Text\Views\OG\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>Text\Views\OG\AddCharacterView.txt</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\Views\OG\CharactersDataGridView.txt" Condition="Exists('$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\Views\OG\CharactersDataGridView.txt')">
+      <NuGetPackageId>Application.Extensions.SharedResources</NuGetPackageId>
+      <NuGetPackageVersion>10.0.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Text\Views\OG\CharactersDataGridView.txt</TargetPath>
+      <DestinationSubDirectory>Text\Views\OG\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>Text\Views\OG\CharactersDataGridView.txt</Link>
+    </Content>
+    <Content Include="$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\Views\OG\UpdateCharacterWindow.txt" Condition="Exists('$(NuGetPackageRoot)application.extensions.sharedresources\10.0.0\contentFiles\any\any\Text\Views\OG\UpdateCharacterWindow.txt')">
+      <NuGetPackageId>Application.Extensions.SharedResources</NuGetPackageId>
+      <NuGetPackageVersion>10.0.0</NuGetPackageVersion>
+      <NuGetItemType>Content</NuGetItemType>
+      <Pack>false</Pack>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Text\Views\OG\UpdateCharacterWindow.txt</TargetPath>
+      <DestinationSubDirectory>Text\Views\OG\</DestinationSubDirectory>
+      <Private>True</Private>
+      <Link>Text\Views\OG\UpdateCharacterWindow.txt</Link>
+    </Content>
+  </ItemGroup>
+</Project>

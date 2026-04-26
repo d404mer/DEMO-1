@@ -1,0 +1,25 @@
+<Window x:Class="VAR1_Demo_exam.Views.ZakazEditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Заявка на перевозку" Height="260" Width="380" WindowStartupLocation="CenterOwner">
+    <Grid Margin="12">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="130"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Дата отправки" Grid.Row="0" Grid.Column="0" VerticalAlignment="Center"/>
+        <DatePicker x:Name="DateOtprPicker" Grid.Row="0" Grid.Column="1" Margin="8,4"/>
+        <TextBlock Text="Дней в пути" Grid.Row="1" Grid.Column="0" VerticalAlignment="Center"/>
+        <TextBox x:Name="DniVPutiTextBox" Grid.Row="1" Grid.Column="1" Margin="8,4"/>
+
+        <Button Grid.Row="3" Grid.ColumnSpan="2" Width="130" Height="30" HorizontalAlignment="Right"
+                Content="Сохранить" Click="SaveButton_Click"/>
+    </Grid>
+</Window>

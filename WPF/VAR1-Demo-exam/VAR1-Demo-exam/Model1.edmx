@@ -1,0 +1,621 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище VAR1Model" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Firma">
+          <Key>
+            <PropertyRef Name="ID_Firm" />
+          </Key>
+          <Property Name="ID_Firm" Type="bigint" Nullable="false" />
+          <Property Name="Figma" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Firma_Polz">
+          <Key>
+            <PropertyRef Name="ID_Firma" />
+            <PropertyRef Name="ID_Polz" />
+          </Key>
+          <Property Name="ID_Firma" Type="bigint" Nullable="false" />
+          <Property Name="ID_Polz" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Pol">
+          <Key>
+            <PropertyRef Name="ID_Pol" />
+          </Key>
+          <Property Name="ID_Pol" Type="bigint" Nullable="false" />
+          <Property Name="Rol" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Pol_Polz">
+          <Key>
+            <PropertyRef Name="ID_Polz" />
+            <PropertyRef Name="ID_Pol" />
+          </Key>
+          <Property Name="ID_Polz" Type="bigint" Nullable="false" />
+          <Property Name="ID_Pol" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Polzovatel">
+          <Key>
+            <PropertyRef Name="ID_Polz" />
+          </Key>
+          <Property Name="ID_Polz" Type="bigint" Nullable="false" />
+          <Property Name="Familia" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Imya" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Otchestvo" Type="nvarchar" MaxLength="50" />
+          <Property Name="Pochta" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="DataRoz" Type="date" />
+          <Property Name="Strana" Type="nvarchar" MaxLength="50" />
+          <Property Name="Telephon" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Stazh" Type="nvarchar" MaxLength="10" />
+          <Property Name="Parol" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="Foto" Type="nvarchar" MaxLength="50" />
+          <Property Name="Adres" Type="nvarchar" MaxLength="200" />
+        </EntityType>
+        <EntityType Name="Rol">
+          <Key>
+            <PropertyRef Name="ID_Rol" />
+          </Key>
+          <Property Name="ID_Rol" Type="bigint" Nullable="false" />
+          <Property Name="Rol" Type="nvarchar" MaxLength="20" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Rol_Polz">
+          <Key>
+            <PropertyRef Name="ID_Polz" />
+            <PropertyRef Name="ID_Rol" />
+          </Key>
+          <Property Name="ID_Polz" Type="bigint" Nullable="false" />
+          <Property Name="ID_Rol" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
+        <EntityType Name="Zakaz">
+          <Key>
+            <PropertyRef Name="ID_Zakaz" />
+          </Key>
+          <Property Name="ID_Zakaz" Type="bigint" Nullable="false" />
+          <Property Name="DataOtpr" Type="datetime" />
+          <Property Name="DniVPuti" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Zakaz_Potreb">
+          <Key>
+            <PropertyRef Name="ID_Zakaz" />
+            <PropertyRef Name="ID_Potreb" />
+          </Key>
+          <Property Name="ID_Zakaz" Type="bigint" Nullable="false" />
+          <Property Name="ID_Potreb" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Zakaz_Proizvoditel">
+          <Key>
+            <PropertyRef Name="ID_Zakaz" />
+            <PropertyRef Name="ID_Proizvod" />
+          </Key>
+          <Property Name="ID_Zakaz" Type="bigint" Nullable="false" />
+          <Property Name="ID_Proizvod" Type="bigint" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Zakaz_Voditel">
+          <Key>
+            <PropertyRef Name="ID_Zakaz" />
+            <PropertyRef Name="ID_Voditel" />
+          </Key>
+          <Property Name="ID_Zakaz" Type="bigint" Nullable="false" />
+          <Property Name="ID_Voditel" Type="bigint" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_Firma_Polz_Firma">
+          <End Role="Firma" Type="Self.Firma" Multiplicity="1" />
+          <End Role="Firma_Polz" Type="Self.Firma_Polz" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Firma">
+              <PropertyRef Name="ID_Firm" />
+            </Principal>
+            <Dependent Role="Firma_Polz">
+              <PropertyRef Name="ID_Firma" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Firma_Polz_Polzovatel">
+          <End Role="Polzovatel" Type="Self.Polzovatel" Multiplicity="1" />
+          <End Role="Firma_Polz" Type="Self.Firma_Polz" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Polzovatel">
+              <PropertyRef Name="ID_Polz" />
+            </Principal>
+            <Dependent Role="Firma_Polz">
+              <PropertyRef Name="ID_Polz" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pol_Polz_Pol">
+          <End Role="Pol" Type="Self.Pol" Multiplicity="1" />
+          <End Role="Pol_Polz" Type="Self.Pol_Polz" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Pol">
+              <PropertyRef Name="ID_Pol" />
+            </Principal>
+            <Dependent Role="Pol_Polz">
+              <PropertyRef Name="ID_Pol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Pol_Polz_Polzovatel">
+          <End Role="Polzovatel" Type="Self.Polzovatel" Multiplicity="1" />
+          <End Role="Pol_Polz" Type="Self.Pol_Polz" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Polzovatel">
+              <PropertyRef Name="ID_Polz" />
+            </Principal>
+            <Dependent Role="Pol_Polz">
+              <PropertyRef Name="ID_Polz" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Rol_Polz_Polzovatel">
+          <End Role="Polzovatel" Type="Self.Polzovatel" Multiplicity="1" />
+          <End Role="Rol_Polz" Type="Self.Rol_Polz" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Polzovatel">
+              <PropertyRef Name="ID_Polz" />
+            </Principal>
+            <Dependent Role="Rol_Polz">
+              <PropertyRef Name="ID_Rol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Rol_Polz_Rol">
+          <End Role="Rol" Type="Self.Rol" Multiplicity="1" />
+          <End Role="Rol_Polz" Type="Self.Rol_Polz" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rol">
+              <PropertyRef Name="ID_Rol" />
+            </Principal>
+            <Dependent Role="Rol_Polz">
+              <PropertyRef Name="ID_Rol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zakaz_Potreb_Polzovatel">
+          <End Role="Polzovatel" Type="Self.Polzovatel" Multiplicity="1" />
+          <End Role="Zakaz_Potreb" Type="Self.Zakaz_Potreb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Polzovatel">
+              <PropertyRef Name="ID_Polz" />
+            </Principal>
+            <Dependent Role="Zakaz_Potreb">
+              <PropertyRef Name="ID_Potreb" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zakaz_Potreb_Zakaz">
+          <End Role="Zakaz" Type="Self.Zakaz" Multiplicity="1" />
+          <End Role="Zakaz_Potreb" Type="Self.Zakaz_Potreb" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zakaz">
+              <PropertyRef Name="ID_Zakaz" />
+            </Principal>
+            <Dependent Role="Zakaz_Potreb">
+              <PropertyRef Name="ID_Zakaz" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zakaz_Proizvoditel_Polzovatel">
+          <End Role="Polzovatel" Type="Self.Polzovatel" Multiplicity="1" />
+          <End Role="Zakaz_Proizvoditel" Type="Self.Zakaz_Proizvoditel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Polzovatel">
+              <PropertyRef Name="ID_Polz" />
+            </Principal>
+            <Dependent Role="Zakaz_Proizvoditel">
+              <PropertyRef Name="ID_Proizvod" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zakaz_Proizvoditel_Zakaz">
+          <End Role="Zakaz" Type="Self.Zakaz" Multiplicity="1" />
+          <End Role="Zakaz_Proizvoditel" Type="Self.Zakaz_Proizvoditel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zakaz">
+              <PropertyRef Name="ID_Zakaz" />
+            </Principal>
+            <Dependent Role="Zakaz_Proizvoditel">
+              <PropertyRef Name="ID_Zakaz" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zakaz_Voditel_Polzovatel">
+          <End Role="Polzovatel" Type="Self.Polzovatel" Multiplicity="1" />
+          <End Role="Zakaz_Voditel" Type="Self.Zakaz_Voditel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Polzovatel">
+              <PropertyRef Name="ID_Polz" />
+            </Principal>
+            <Dependent Role="Zakaz_Voditel">
+              <PropertyRef Name="ID_Voditel" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Zakaz_Voditel_Zakaz">
+          <End Role="Zakaz" Type="Self.Zakaz" Multiplicity="1" />
+          <End Role="Zakaz_Voditel" Type="Self.Zakaz_Voditel" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zakaz">
+              <PropertyRef Name="ID_Zakaz" />
+            </Principal>
+            <Dependent Role="Zakaz_Voditel">
+              <PropertyRef Name="ID_Zakaz" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="Хранилище VAR1ModelContainer">
+          <EntitySet Name="Firma" EntityType="Self.Firma" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Firma_Polz" EntityType="Self.Firma_Polz" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pol" EntityType="Self.Pol" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Pol_Polz" EntityType="Self.Pol_Polz" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Polzovatel" EntityType="Self.Polzovatel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Rol" EntityType="Self.Rol" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Rol_Polz" EntityType="Self.Rol_Polz" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Zakaz" EntityType="Self.Zakaz" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Zakaz_Potreb" EntityType="Self.Zakaz_Potreb" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Zakaz_Proizvoditel" EntityType="Self.Zakaz_Proizvoditel" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Zakaz_Voditel" EntityType="Self.Zakaz_Voditel" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_Firma_Polz_Firma" Association="Self.FK_Firma_Polz_Firma">
+            <End Role="Firma" EntitySet="Firma" />
+            <End Role="Firma_Polz" EntitySet="Firma_Polz" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Firma_Polz_Polzovatel" Association="Self.FK_Firma_Polz_Polzovatel">
+            <End Role="Polzovatel" EntitySet="Polzovatel" />
+            <End Role="Firma_Polz" EntitySet="Firma_Polz" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pol_Polz_Pol" Association="Self.FK_Pol_Polz_Pol">
+            <End Role="Pol" EntitySet="Pol" />
+            <End Role="Pol_Polz" EntitySet="Pol_Polz" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Pol_Polz_Polzovatel" Association="Self.FK_Pol_Polz_Polzovatel">
+            <End Role="Polzovatel" EntitySet="Polzovatel" />
+            <End Role="Pol_Polz" EntitySet="Pol_Polz" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rol_Polz_Polzovatel" Association="Self.FK_Rol_Polz_Polzovatel">
+            <End Role="Polzovatel" EntitySet="Polzovatel" />
+            <End Role="Rol_Polz" EntitySet="Rol_Polz" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rol_Polz_Rol" Association="Self.FK_Rol_Polz_Rol">
+            <End Role="Rol" EntitySet="Rol" />
+            <End Role="Rol_Polz" EntitySet="Rol_Polz" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zakaz_Potreb_Polzovatel" Association="Self.FK_Zakaz_Potreb_Polzovatel">
+            <End Role="Polzovatel" EntitySet="Polzovatel" />
+            <End Role="Zakaz_Potreb" EntitySet="Zakaz_Potreb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zakaz_Potreb_Zakaz" Association="Self.FK_Zakaz_Potreb_Zakaz">
+            <End Role="Zakaz" EntitySet="Zakaz" />
+            <End Role="Zakaz_Potreb" EntitySet="Zakaz_Potreb" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zakaz_Proizvoditel_Polzovatel" Association="Self.FK_Zakaz_Proizvoditel_Polzovatel">
+            <End Role="Polzovatel" EntitySet="Polzovatel" />
+            <End Role="Zakaz_Proizvoditel" EntitySet="Zakaz_Proizvoditel" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zakaz_Proizvoditel_Zakaz" Association="Self.FK_Zakaz_Proizvoditel_Zakaz">
+            <End Role="Zakaz" EntitySet="Zakaz" />
+            <End Role="Zakaz_Proizvoditel" EntitySet="Zakaz_Proizvoditel" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zakaz_Voditel_Polzovatel" Association="Self.FK_Zakaz_Voditel_Polzovatel">
+            <End Role="Polzovatel" EntitySet="Polzovatel" />
+            <End Role="Zakaz_Voditel" EntitySet="Zakaz_Voditel" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Zakaz_Voditel_Zakaz" Association="Self.FK_Zakaz_Voditel_Zakaz">
+            <End Role="Zakaz" EntitySet="Zakaz" />
+            <End Role="Zakaz_Voditel" EntitySet="Zakaz_Voditel" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="VAR1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Firma">
+          <Key>
+            <PropertyRef Name="ID_Firm" />
+          </Key>
+          <Property Name="ID_Firm" Type="Int64" Nullable="false" />
+          <Property Name="Figma" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Polzovatels" Relationship="Self.Firma_Polz" FromRole="Firma" ToRole="Polzovatel" />
+        </EntityType>
+        <EntityType Name="Pol">
+          <Key>
+            <PropertyRef Name="ID_Pol" />
+          </Key>
+          <Property Name="ID_Pol" Type="Int64" Nullable="false" />
+          <Property Name="Rol" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Polzovatels" Relationship="Self.Pol_Polz" FromRole="Pol" ToRole="Polzovatel" />
+        </EntityType>
+        <EntityType Name="Polzovatel">
+          <Key>
+            <PropertyRef Name="ID_Polz" />
+          </Key>
+          <Property Name="ID_Polz" Type="Int64" Nullable="false" />
+          <Property Name="Familia" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Imya" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Otchestvo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Pochta" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="DataRoz" Type="DateTime" Precision="0" />
+          <Property Name="Strana" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Telephon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Stazh" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Parol" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Foto" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Adres" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Rol_Polz" Relationship="Self.FK_Rol_Polz_Polzovatel" FromRole="Polzovatel" ToRole="Rol_Polz" />
+          <NavigationProperty Name="Firmas" Relationship="Self.Firma_Polz" FromRole="Polzovatel" ToRole="Firma" />
+          <NavigationProperty Name="Pols" Relationship="Self.Pol_Polz" FromRole="Polzovatel" ToRole="Pol" />
+          <NavigationProperty Name="Zakazs" Relationship="Self.Zakaz_Potreb" FromRole="Polzovatel" ToRole="Zakaz" />
+          <NavigationProperty Name="Zakazs1" Relationship="Self.Zakaz_Proizvoditel" FromRole="Polzovatel" ToRole="Zakaz" />
+          <NavigationProperty Name="Zakazs2" Relationship="Self.Zakaz_Voditel" FromRole="Polzovatel" ToRole="Zakaz" />
+        </EntityType>
+        <EntityType Name="Rol">
+          <Key>
+            <PropertyRef Name="ID_Rol" />
+          </Key>
+          <Property Name="ID_Rol" Type="Int64" Nullable="false" />
+          <Property Name="Rol1" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Rol_Polz" Relationship="Self.FK_Rol_Polz_Rol" FromRole="Rol" ToRole="Rol_Polz" />
+        </EntityType>
+        <EntityType Name="Rol_Polz">
+          <Key>
+            <PropertyRef Name="ID_Polz" />
+            <PropertyRef Name="ID_Rol" />
+          </Key>
+          <Property Name="ID_Polz" Type="Int64" Nullable="false" />
+          <Property Name="ID_Rol" Type="Int64" Nullable="false" />
+          <NavigationProperty Name="Polzovatel" Relationship="Self.FK_Rol_Polz_Polzovatel" FromRole="Rol_Polz" ToRole="Polzovatel" />
+          <NavigationProperty Name="Rol" Relationship="Self.FK_Rol_Polz_Rol" FromRole="Rol_Polz" ToRole="Rol" />
+        </EntityType>
+        <EntityType Name="sysdiagram">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="Zakaz">
+          <Key>
+            <PropertyRef Name="ID_Zakaz" />
+          </Key>
+          <Property Name="ID_Zakaz" Type="Int64" Nullable="false" />
+          <Property Name="DataOtpr" Type="DateTime" Precision="3" />
+          <Property Name="DniVPuti" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Polzovatels" Relationship="Self.Zakaz_Potreb" FromRole="Zakaz" ToRole="Polzovatel" />
+          <NavigationProperty Name="Polzovatels1" Relationship="Self.Zakaz_Proizvoditel" FromRole="Zakaz" ToRole="Polzovatel" />
+          <NavigationProperty Name="Polzovatels2" Relationship="Self.Zakaz_Voditel" FromRole="Zakaz" ToRole="Polzovatel" />
+        </EntityType>
+        <Association Name="FK_Rol_Polz_Polzovatel">
+          <End Role="Polzovatel" Type="Self.Polzovatel" Multiplicity="1" />
+          <End Role="Rol_Polz" Type="Self.Rol_Polz" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Polzovatel">
+              <PropertyRef Name="ID_Polz" />
+            </Principal>
+            <Dependent Role="Rol_Polz">
+              <PropertyRef Name="ID_Rol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Rol_Polz_Rol">
+          <End Role="Rol" Type="Self.Rol" Multiplicity="1" />
+          <End Role="Rol_Polz" Type="Self.Rol_Polz" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Rol">
+              <PropertyRef Name="ID_Rol" />
+            </Principal>
+            <Dependent Role="Rol_Polz">
+              <PropertyRef Name="ID_Rol" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Firma_Polz">
+          <End Role="Firma" Type="Self.Firma" Multiplicity="*" />
+          <End Role="Polzovatel" Type="Self.Polzovatel" Multiplicity="*" />
+        </Association>
+        <Association Name="Pol_Polz">
+          <End Role="Pol" Type="Self.Pol" Multiplicity="*" />
+          <End Role="Polzovatel" Type="Self.Polzovatel" Multiplicity="*" />
+        </Association>
+        <Association Name="Zakaz_Potreb">
+          <End Role="Polzovatel" Type="Self.Polzovatel" Multiplicity="*" />
+          <End Role="Zakaz" Type="Self.Zakaz" Multiplicity="*" />
+        </Association>
+        <Association Name="Zakaz_Proizvoditel">
+          <End Role="Polzovatel" Type="Self.Polzovatel" Multiplicity="*" />
+          <End Role="Zakaz" Type="Self.Zakaz" Multiplicity="*" />
+        </Association>
+        <Association Name="Zakaz_Voditel">
+          <End Role="Polzovatel" Type="Self.Polzovatel" Multiplicity="*" />
+          <End Role="Zakaz" Type="Self.Zakaz" Multiplicity="*" />
+        </Association>
+        <EntityContainer Name="VAR1Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Firmas" EntityType="Self.Firma" />
+          <EntitySet Name="Pols" EntityType="Self.Pol" />
+          <EntitySet Name="Polzovatels" EntityType="Self.Polzovatel" />
+          <EntitySet Name="Rols" EntityType="Self.Rol" />
+          <EntitySet Name="Rol_Polz" EntityType="Self.Rol_Polz" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+          <EntitySet Name="Zakazs" EntityType="Self.Zakaz" />
+          <AssociationSet Name="FK_Rol_Polz_Polzovatel" Association="Self.FK_Rol_Polz_Polzovatel">
+            <End Role="Polzovatel" EntitySet="Polzovatels" />
+            <End Role="Rol_Polz" EntitySet="Rol_Polz" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Rol_Polz_Rol" Association="Self.FK_Rol_Polz_Rol">
+            <End Role="Rol" EntitySet="Rols" />
+            <End Role="Rol_Polz" EntitySet="Rol_Polz" />
+          </AssociationSet>
+          <AssociationSet Name="Firma_Polz" Association="Self.Firma_Polz">
+            <End Role="Firma" EntitySet="Firmas" />
+            <End Role="Polzovatel" EntitySet="Polzovatels" />
+          </AssociationSet>
+          <AssociationSet Name="Pol_Polz" Association="Self.Pol_Polz">
+            <End Role="Pol" EntitySet="Pols" />
+            <End Role="Polzovatel" EntitySet="Polzovatels" />
+          </AssociationSet>
+          <AssociationSet Name="Zakaz_Potreb" Association="Self.Zakaz_Potreb">
+            <End Role="Polzovatel" EntitySet="Polzovatels" />
+            <End Role="Zakaz" EntitySet="Zakazs" />
+          </AssociationSet>
+          <AssociationSet Name="Zakaz_Proizvoditel" Association="Self.Zakaz_Proizvoditel">
+            <End Role="Polzovatel" EntitySet="Polzovatels" />
+            <End Role="Zakaz" EntitySet="Zakazs" />
+          </AssociationSet>
+          <AssociationSet Name="Zakaz_Voditel" Association="Self.Zakaz_Voditel">
+            <End Role="Polzovatel" EntitySet="Polzovatels" />
+            <End Role="Zakaz" EntitySet="Zakazs" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище VAR1ModelContainer" CdmEntityContainer="VAR1Entities">
+          <EntitySetMapping Name="Firmas">
+            <EntityTypeMapping TypeName="VAR1Model.Firma">
+              <MappingFragment StoreEntitySet="Firma">
+                <ScalarProperty Name="ID_Firm" ColumnName="ID_Firm" />
+                <ScalarProperty Name="Figma" ColumnName="Figma" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Pols">
+            <EntityTypeMapping TypeName="VAR1Model.Pol">
+              <MappingFragment StoreEntitySet="Pol">
+                <ScalarProperty Name="ID_Pol" ColumnName="ID_Pol" />
+                <ScalarProperty Name="Rol" ColumnName="Rol" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Polzovatels">
+            <EntityTypeMapping TypeName="VAR1Model.Polzovatel">
+              <MappingFragment StoreEntitySet="Polzovatel">
+                <ScalarProperty Name="ID_Polz" ColumnName="ID_Polz" />
+                <ScalarProperty Name="Familia" ColumnName="Familia" />
+                <ScalarProperty Name="Imya" ColumnName="Imya" />
+                <ScalarProperty Name="Otchestvo" ColumnName="Otchestvo" />
+                <ScalarProperty Name="Pochta" ColumnName="Pochta" />
+                <ScalarProperty Name="DataRoz" ColumnName="DataRoz" />
+                <ScalarProperty Name="Strana" ColumnName="Strana" />
+                <ScalarProperty Name="Telephon" ColumnName="Telephon" />
+                <ScalarProperty Name="Stazh" ColumnName="Stazh" />
+                <ScalarProperty Name="Parol" ColumnName="Parol" />
+                <ScalarProperty Name="Foto" ColumnName="Foto" />
+                <ScalarProperty Name="Adres" ColumnName="Adres" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rols">
+            <EntityTypeMapping TypeName="VAR1Model.Rol">
+              <MappingFragment StoreEntitySet="Rol">
+                <ScalarProperty Name="ID_Rol" ColumnName="ID_Rol" />
+                <ScalarProperty Name="Rol1" ColumnName="Rol" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Rol_Polz">
+            <EntityTypeMapping TypeName="VAR1Model.Rol_Polz">
+              <MappingFragment StoreEntitySet="Rol_Polz">
+                <ScalarProperty Name="ID_Polz" ColumnName="ID_Polz" />
+                <ScalarProperty Name="ID_Rol" ColumnName="ID_Rol" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="VAR1Model.sysdiagram">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="definition" ColumnName="definition" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Zakazs">
+            <EntityTypeMapping TypeName="VAR1Model.Zakaz">
+              <MappingFragment StoreEntitySet="Zakaz">
+                <ScalarProperty Name="ID_Zakaz" ColumnName="ID_Zakaz" />
+                <ScalarProperty Name="DataOtpr" ColumnName="DataOtpr" />
+                <ScalarProperty Name="DniVPuti" ColumnName="DniVPuti" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="Firma_Polz" TypeName="VAR1Model.Firma_Polz" StoreEntitySet="Firma_Polz">
+            <EndProperty Name="Firma">
+              <ScalarProperty Name="ID_Firm" ColumnName="ID_Firma" />
+            </EndProperty>
+            <EndProperty Name="Polzovatel">
+              <ScalarProperty Name="ID_Polz" ColumnName="ID_Polz" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="Pol_Polz" TypeName="VAR1Model.Pol_Polz" StoreEntitySet="Pol_Polz">
+            <EndProperty Name="Pol">
+              <ScalarProperty Name="ID_Pol" ColumnName="ID_Pol" />
+            </EndProperty>
+            <EndProperty Name="Polzovatel">
+              <ScalarProperty Name="ID_Polz" ColumnName="ID_Polz" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="Zakaz_Potreb" TypeName="VAR1Model.Zakaz_Potreb" StoreEntitySet="Zakaz_Potreb">
+            <EndProperty Name="Polzovatel">
+              <ScalarProperty Name="ID_Polz" ColumnName="ID_Potreb" />
+            </EndProperty>
+            <EndProperty Name="Zakaz">
+              <ScalarProperty Name="ID_Zakaz" ColumnName="ID_Zakaz" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="Zakaz_Proizvoditel" TypeName="VAR1Model.Zakaz_Proizvoditel" StoreEntitySet="Zakaz_Proizvoditel">
+            <EndProperty Name="Polzovatel">
+              <ScalarProperty Name="ID_Polz" ColumnName="ID_Proizvod" />
+            </EndProperty>
+            <EndProperty Name="Zakaz">
+              <ScalarProperty Name="ID_Zakaz" ColumnName="ID_Zakaz" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <AssociationSetMapping Name="Zakaz_Voditel" TypeName="VAR1Model.Zakaz_Voditel" StoreEntitySet="Zakaz_Voditel">
+            <EndProperty Name="Polzovatel">
+              <ScalarProperty Name="ID_Polz" ColumnName="ID_Voditel" />
+            </EndProperty>
+            <EndProperty Name="Zakaz">
+              <ScalarProperty Name="ID_Zakaz" ColumnName="ID_Zakaz" />
+            </EndProperty>
+          </AssociationSetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

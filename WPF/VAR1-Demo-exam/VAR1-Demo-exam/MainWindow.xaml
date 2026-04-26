@@ -1,0 +1,40 @@
+﻿<Window x:Class="VAR1_Demo_exam.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="Авторизация" Height="300" Width="420">
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Система транспортных перевозок"
+                   FontSize="20"
+                   FontWeight="Bold"/>
+        <TextBlock Grid.Row="1"
+                   Margin="0,20,0,6"
+                   Text="IdNumber"/>
+        <TextBox x:Name="IdNumberTextBox"
+                 Grid.Row="2"
+                 Height="28"/>
+        <TextBlock Grid.Row="3"
+                   Margin="0,10,0,6"
+                   Text="Password"/>
+        <PasswordBox x:Name="PasswordBox"
+                     Grid.Row="4"
+                     Height="28"/>
+        <Button Grid.Row="5"
+                Margin="0,20,0,0"
+                Height="32"
+                Content="Войти"
+                Click="LoginButton_Click"/>
+    </Grid>
+</Window>
